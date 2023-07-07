@@ -1,9 +1,10 @@
 package com.erinc.questapp.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+
 import lombok.Data;
+
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="usertbl")
@@ -11,6 +12,7 @@ import lombok.Data;
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String userName;
     String password;
